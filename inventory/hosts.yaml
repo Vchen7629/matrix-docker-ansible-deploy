@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2022 MDAD project contributors
+# SPDX-FileCopyrightText: 2024 Slavi Pantaleev
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+---
+
+# This is a host file for usage with the `../bin/ansible-all-hosts.sh` script,
+# which runs Ansible against a bunch of hosts, each with its own `sudo` password.
+matrix_servers:
+  hosts:
+    matrix.test.local:
+      ansible_host: 
+      ansible_ssh_user: 
+      ansible_ssh_private_key_file:
+      ansible_become_password: 
+      become: true
+      become_user: root
