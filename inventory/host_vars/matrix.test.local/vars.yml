@@ -85,7 +85,7 @@ postgres_connection_password: e1DWeID1pHjUpbBRnT9BKREX4F8GIgJfc1hMTKvZMT90uFlBQ1
 # Disable coturn (TURN/STUN server) - not needed for text-only chat
 matrix_coturn_enabled: false
 
-# Host Element on separate domain to test CORS
+# Host Element on separate domain
 matrix_client_element_enabled: true
 matrix_client_element_hostname: "element.test.local"
 
@@ -114,8 +114,8 @@ aux_directory_definitions:
 
 aux_file_definitions:
   - dest: "/matrix/ssl/cert.pem"
-    content: "{{ lookup('file', playbook_dir + '/matrix.test.local+1.pem') }}"
+    content: "{{ lookup('file', playbook_dir + '/ssl-certs/matrix.test.local+2.pem') }}"
     mode: '0644'
   - dest: "/matrix/ssl/privkey.pem"
-    content: "{{ lookup('file', playbook_dir + '/matrix.test.local+1-key.pem') }}"
+    content: "{{ lookup('file', playbook_dir + '/ssl-certs/matrix.test.local+2-key.pem') }}"
     mode: '0600'
