@@ -43,6 +43,9 @@ matrix_playbook_ssl_enabled: true
 # Enable Admin account creation to allow for managing rooms like deleting them
 matrix_synapse_admin_enabled: true
 
+# Expose Synapse Admin directly for nginx to proxy to
+matrix_synapse_admin_container_http_host_bind_port: '127.0.0.1:8766'
+
 # Controls whether container networks will be created with IPv6 support.
 #
 # If you also have IPv6 support on your server/network and AAAA DNS records pointing to the server,
