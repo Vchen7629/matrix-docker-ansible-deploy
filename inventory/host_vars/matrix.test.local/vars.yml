@@ -40,6 +40,8 @@ matrix_client_element_container_http_host_bind_port: '127.0.0.1:8765'
 # Since we're not using Traefik, we need to handle SSL externally (nginx does this)
 matrix_playbook_ssl_enabled: true
 
+# Enable Admin account creation to allow for managing rooms like deleting them
+matrix_synapse_admin_enabled: true
 
 # Controls whether container networks will be created with IPv6 support.
 #
